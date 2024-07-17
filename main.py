@@ -4,10 +4,9 @@ import pyttsx3
 pdf_file = open('sample.pdf', 'rb')
 
 pdf_reader = PyPDF2.PdfReader(pdf_file)
-pages = pdf_reader.pages[1:5]
 
 text = ""
-for page in pages:
+for page in pdf_reader.pages:
     text += page.extract_text()
 
 
